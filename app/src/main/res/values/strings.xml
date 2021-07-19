@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Spoken Task</string>
+    <string name="profile_fragment_label">Profile</string>
+    <string name="albums_fragment_label">Albums</string>
+    <string name="connection_issue">Connection Problem</string>
+    <string name="albums_label">My Albums</string>
+</resources>

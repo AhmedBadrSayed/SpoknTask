@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ProfileFragment">
+
+    <fragment
+        android:id="@+id/ProfileFragment"
+        android:name="com.mondiamedia.ahmedbadr.spokentask.ui.ProfileFragment"
+        android:label="@string/profile_fragment_label"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_ProfileFragment_to_AlbumsFragment"
+            app:destination="@id/AlbumsFragment"
+            app:enterAnim="@android:anim/fade_in">
+            <argument
+                android:name="albumId"
+                android:defaultValue="1"
+                app:argType="integer" />
+            <argument
+                android:name="albumName"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/AlbumsFragment"
+        android:name="com.mondiamedia.ahmedbadr.spokentask.ui.AlbumsFragment"
+        android:label="@string/albums_fragment_label"
+        tools:layout="@layout/fragment_albums">
+        <argument
+            android:name="albumId"
+            android:defaultValue="1"
+            app:argType="integer" />
+        <argument
+            android:name="albumName"
+            app:argType="string" />
+    </fragment>
+</navigation>
